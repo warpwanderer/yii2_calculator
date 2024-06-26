@@ -59,6 +59,7 @@
                     <?php endforeach ?>
             </select>
     </div>
+    
     <div class="mb-3">
     <label for="type" class="form-label">Тип сырья</label>
             <select name = 'type' class="form-select" aria-label="Default select example">
