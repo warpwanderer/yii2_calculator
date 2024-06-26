@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\controllers\MainController;
+
 ?>
 
 <?php
@@ -50,7 +51,7 @@ use yii\controllers\MainController;
 
 <div class  ='container'>
     <div class="row mt-5">   
-<form action = "index.php" method = "POST">
+<form action = "index.php" class = "comment-form" method = "POST" id='form_id'>
     <div class="mb-3">
         <label for="months" class="form-label">Месяц</label>
         <?= $form->field($model, 'months')->dropDownList($months)->label(false);?>
@@ -66,11 +67,14 @@ use yii\controllers\MainController;
         <?= $form->field($model, 'type')->dropDownList($type)->label(false);?>
     </div>
     <div class="form-group">
-            <?= Html::submitButton('Расчитать', ['class' => 'btn btn-primary']) ?>
+            <?= Html::submitButton('Расчитать', ['class' => 'btn btn-primary', 'id' => 'submit_button']) ?>
     </div>
 </form>
 </div>
 </div>
+
+<div id="result-box"> </div>
+
 <?php ActiveForm::end(); ?>
 
 <div class="container">
@@ -95,6 +99,7 @@ use yii\controllers\MainController;
         </div>
     </div>
 </div>
+
 
 <h1 align="center"><?= $costValue ?></h1>
 

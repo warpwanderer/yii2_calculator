@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
         "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
     ];
     public $js = [
+        'js/index.js',
         "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     ];
     public $depends = [

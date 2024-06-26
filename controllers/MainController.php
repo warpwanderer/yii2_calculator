@@ -22,6 +22,7 @@ class MainController extends Controller
             $tonnage = $table->tonnage;
             $price = $table->price;
             
+            
             if ($model->load(\Yii::$app->request->post())) {
                 $selectType = $type[$model['type']];
                 $selectTonnage = $tonnage[$model['tonnage']];
